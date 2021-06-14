@@ -1,8 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-L
-src/main/java/cita/Cita.java,5\9\5973a8fb2dcf674309c0d1c057f3418326117275
 Z
 *src/main/java/propietario/Propietario.java,6\9\69f29f2947851f1cdd016d9e1ff357e216b6a261
 U
@@ -15,8 +13,6 @@ U
 %src/main/java/cita/values/CitaId.java,5\0\502037bd2d080db1d2f88e71ed3a36e077190b23
 P
  src/main/java/cita/Servicio.java,0\9\09499be65e286bf3968c6ed5425e4772f158f325
-O
-src/main/java/cita/Factura.java,e\9\e90fb56e9dae20635978395b1c026af5a9a4426e
 [
 +src/main/java/cita/values/TipoServicio.java,d\b\dbbb107f5bdfb5dee0abcba085b885db315033f2
 U
@@ -55,8 +51,6 @@ _
 /src/main/java/medico/values/EspecialidadId.java,9\e\9ee7358a6e1feb20c818a81be50777c0482eeb9f
 ^
 .src/main/java/medico/values/ConsultorioId.java,e\4\e4eafb7f2a597897a659255aad41016afbcc4e34
-W
-'src/main/java/medico/values/Nombre.java,3\d\3d75fb0bcd3f163ab53fba52ffb7f40a9c16320d
 Z
 *src/main/java/medico/values/Ubicacion.java,1\5\15b2ef211bab96086e7fcfad08f007011a671c62
 Y
