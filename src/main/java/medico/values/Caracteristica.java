@@ -1,4 +1,10 @@
 package medico.values;
 
-public class Caracteristica {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class Caracteristica implements ValueObject<String> {
+    public String value(){
+        return null;
+    }
+
 }

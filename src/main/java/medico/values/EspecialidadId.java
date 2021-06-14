@@ -1,4 +1,6 @@
 package medico.values;
 
-public class EspecialidadId {
+import co.com.sofka.domain.generic.Identity;
+
+public class EspecialidadId extends Identity {
 }

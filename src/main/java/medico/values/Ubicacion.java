@@ -1,4 +1,10 @@
 package medico.values;
 
-public class Ubicacion {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class Ubicacion implements ValueObject<String> {
+
+    public String value(){
+        return null;
+    }
 }
