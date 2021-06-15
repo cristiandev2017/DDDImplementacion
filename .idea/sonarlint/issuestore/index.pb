@@ -1,6 +1,4 @@
 
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 Z
 *src/main/java/propietario/Propietario.java,6\9\69f29f2947851f1cdd016d9e1ff357e216b6a261
 U
@@ -47,13 +45,7 @@ a
 +src/main/java/propietario/values/Fecha.java,f\c\fc171a6350029ff4b4255f143699fd279062b59e
 Y
 )src/main/java/medico/values/MedicoId.java,1\8\1890905458be2c152942ebe437d88cfb8851826d
-_
-/src/main/java/medico/values/EspecialidadId.java,9\e\9ee7358a6e1feb20c818a81be50777c0482eeb9f
-^
-.src/main/java/medico/values/ConsultorioId.java,e\4\e4eafb7f2a597897a659255aad41016afbcc4e34
 Z
 *src/main/java/medico/values/Ubicacion.java,1\5\15b2ef211bab96086e7fcfad08f007011a671c62
 Y
 )src/main/java/medico/values/Telefono.java,0\a\0a614226618e24d17ed1cfba4b10722d037c49a9
-]
--src/main/java/medico/events/MedicoCreado.java,6\e\6e39ae1afe509fa71e00511c25093e3430020093

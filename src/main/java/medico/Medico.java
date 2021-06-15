@@ -5,11 +5,8 @@ import cita.values.Descripcion;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import medico.domainevents.*;
-import medico.events.MedicoCreado;
-import medico.values.Caracteristica;
-import medico.values.EspecialidadId;
-import medico.values.MedicoId;
-import medico.values.Nombre;
+import medico.domainevents.MedicoCreado;
+import medico.values.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +16,17 @@ import java.util.Set;
 public class Medico extends AggregateEvent<MedicoId> {
     //En este se definen el valor agregado
     protected Nombre nombre;
+    protected Telefono telefono;
+    protected Direccion direccion;
     //Aca estamos llamando a la entidad hija
     protected Set<Especialidad> especialidades;
     //on este asociamos el agregado asociado
     protected CitaId citaId;
 
 
-    public Medico(MedicoId entityId, Nombre nombre){
+    public Medico(MedicoId entityId, Nombre nombre, Direccion direccion, Telefono telefono){
         super(entityId);
-        appendChange(new MedicoCreado(nombre)).apply();
+        appendChange(new MedicoCreado(nombre,telefono,direccion)).apply();
     }
 
     //Esta es la factoria lo que me permite generar al agregado sin volver a mandarle todos los parametros
@@ -37,8 +36,6 @@ public class Medico extends AggregateEvent<MedicoId> {
         events.forEach(medico::applyEvent);
         return medico;
     }
-
-
 
     //Ahora se afectaran los estados se crea un constructor privado
     private Medico(MedicoId entityId){
@@ -79,6 +76,14 @@ public class Medico extends AggregateEvent<MedicoId> {
 
     public Nombre nombre(){
         return nombre;
+    }
+
+    public Telefono telefono(){
+        return telefono;
+    }
+
+    public Direccion direccion(){
+        return direccion;
     }
 
     public CitaId citaId(){
