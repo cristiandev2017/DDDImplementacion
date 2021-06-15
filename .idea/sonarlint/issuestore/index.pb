@@ -3,8 +3,6 @@ Z
 *src/main/java/propietario/Propietario.java,6\9\69f29f2947851f1cdd016d9e1ff357e216b6a261
 U
 %src/main/java/medico/Consultorio.java,5\c\5c48cf70586c6222550249b7a0d2d33c6d4d3d0c
-P
- src/main/java/cita/Servicio.java,0\9\09499be65e286bf3968c6ed5425e4772f158f325
 V
 &src/main/java/propietario/Mascota.java,7\2\72c6bd949794e3bd50d62e043f0ed7f43ce7698a
 X
