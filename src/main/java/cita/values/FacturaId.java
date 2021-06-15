@@ -1,4 +1,6 @@
 package cita.values;
 
-public class FacturaId {
+import co.com.sofka.domain.generic.Identity;
+
+public class FacturaId  extends Identity {
 }

@@ -1,4 +1,7 @@
 package cita.values;
 
-public class TipoServicio {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class TipoServicio implements ValueObject<String> {
+    public String value(){return null;}
 }

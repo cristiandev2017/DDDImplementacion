@@ -1,4 +1,6 @@
 package cita.values;
 
-public class CitaId {
+import co.com.sofka.domain.generic.Identity;
+
+public class CitaId extends Identity {
 }
