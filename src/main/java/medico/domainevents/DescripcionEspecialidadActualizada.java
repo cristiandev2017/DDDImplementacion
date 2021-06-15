@@ -1,6 +1,6 @@
 package medico.domainevents;
 
-import cita.values.Descripcion;
+import medico.values.Descripcion;
 import co.com.sofka.domain.generic.DomainEvent;
 import medico.values.EspecialidadId;
 

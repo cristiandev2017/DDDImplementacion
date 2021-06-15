@@ -1,8 +1,6 @@
 
 Z
 *src/main/java/propietario/Propietario.java,6\9\69f29f2947851f1cdd016d9e1ff357e216b6a261
-U
-%src/main/java/medico/Consultorio.java,5\c\5c48cf70586c6222550249b7a0d2d33c6d4d3d0c
 V
 &src/main/java/propietario/Mascota.java,7\2\72c6bd949794e3bd50d62e043f0ed7f43ce7698a
 X
@@ -25,5 +23,3 @@ a
 1src/main/java/propietario/values/Descripcion.java,0\e\0e911c302394680468f0a3393a46563f4f38da4a
 [
 +src/main/java/propietario/values/Fecha.java,f\c\fc171a6350029ff4b4255f143699fd279062b59e
-Z
-*src/main/java/medico/values/Ubicacion.java,1\5\15b2ef211bab96086e7fcfad08f007011a671c62

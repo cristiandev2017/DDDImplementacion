@@ -2,14 +2,12 @@ package medico.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-import java.awt.*;
 import java.util.Objects;
 
-public class Ubicacion implements ValueObject<String> {
-
+public class Descripcion implements ValueObject<String> {
     private final String value;
 
-    public Ubicacion(String value){
+    public Descripcion(String value){
         this.value = Objects.requireNonNull(value);
         if(this.value.isBlank()){
             throw new IllegalArgumentException("la descripcion no puede estar vacia");
@@ -20,17 +18,14 @@ public class Ubicacion implements ValueObject<String> {
         }
     }
 
-
-    public String value(){
-        return value;
-    }
+    public String value(){return value; }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Ubicacion ubicacion = (Ubicacion) o;
-        return Objects.equals(value, ubicacion.value);
+        Descripcion that = (Descripcion) o;
+        return Objects.equals(value, that.value);
     }
 
     @Override

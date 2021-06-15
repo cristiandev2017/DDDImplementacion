@@ -1,7 +1,6 @@
 package medico;
 
 import cita.values.CitaId;
-import cita.values.Descripcion;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import medico.domainevents.*;
@@ -20,7 +19,8 @@ public class Medico extends AggregateEvent<MedicoId> {
     protected Direccion direccion;
     //Aca estamos llamando a la entidad hija
     protected Set<Especialidad> especialidades;
-    //on este asociamos el agregado asociado
+    protected Set<Consultorio> consultorios;
+    //Con este asociamos el agregado asociado
     protected CitaId citaId;
 
 
@@ -51,6 +51,13 @@ public class Medico extends AggregateEvent<MedicoId> {
         appendChange(new EspecialidadAgregada(entityId,caracteristica,descripcion)).apply();
     }
 
+    public void agregarConsultorio(ConsultorioId entityId,Nombre nombre,Ubicacion ubicacion){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(nombre);
+        Objects.requireNonNull(ubicacion);
+        appendChange(new ConsultorioAgregado(entityId,nombre,ubicacion)).apply();
+    }
+
     public void asociarCita(CitaId citaId){
         appendChange(new CitaAsociada(citaId)).apply();
     }
@@ -63,9 +70,18 @@ public class Medico extends AggregateEvent<MedicoId> {
         appendChange(new CaracteristicaEspecialidadActualizada(entityId,caracteristica));
     }
 
+    public void cambiarNombreConsultorio(ConsultorioId entityId,Nombre nombre){
+        appendChange(new NombreConsultorioCambiado(entityId,nombre));
+    }
+
+    public void cambiarUbicacionConsultorio(ConsultorioId entityId,Ubicacion ubicacion){
+        appendChange(new UbicacionCambiada(entityId,ubicacion));
+    }
+
     public void actualizarDescripcionDeEspecialidad(EspecialidadId entityId,Descripcion descripcion){
         appendChange(new DescripcionEspecialidadActualizada(entityId,descripcion));
     }
+
 
     protected Optional<Especialidad> getEspecialidadPorId(EspecialidadId entityId){
         return especialidades()
@@ -73,6 +89,14 @@ public class Medico extends AggregateEvent<MedicoId> {
                 .filter(especialidad -> especialidad.identity().equals(entityId))
                 .findFirst();
     }
+
+    protected Optional<Consultorio> getConsultorioPorId(ConsultorioId entityId){
+        return consultorios()
+                .stream()
+                .filter(consultorio -> consultorio.identity().equals(entityId))
+                .findFirst();
+    }
+
 
     public Nombre nombre(){
         return nombre;
@@ -92,5 +116,9 @@ public class Medico extends AggregateEvent<MedicoId> {
 
     public Set<Especialidad> especialidades(){
         return especialidades;
+    }
+
+    public Set<Consultorio> consultorios(){
+        return consultorios;
     }
 }
