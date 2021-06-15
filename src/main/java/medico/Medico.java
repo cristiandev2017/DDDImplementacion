@@ -24,7 +24,7 @@ public class Medico extends AggregateEvent<MedicoId> {
     protected CitaId citaId;
 
 
-    public Medico(MedicoId entityId, Nombre nombre, Direccion direccion, Telefono telefono){
+    public Medico(MedicoId entityId, Nombre nombre,  Telefono telefono,Direccion direccion){
         super(entityId);
         appendChange(new MedicoCreado(nombre,telefono,direccion)).apply();
     }

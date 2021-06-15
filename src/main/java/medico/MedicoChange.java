@@ -13,6 +13,7 @@ public class MedicoChange extends EventChange {
             medico.telefono = event.getTelefono();
             medico.direccion = event.getDireccion();
             medico.especialidades = new HashSet<>();
+            medico.consultorios = new HashSet<>();
         });
 
         apply((CitaAsociada event) -> {

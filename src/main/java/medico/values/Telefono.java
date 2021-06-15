@@ -10,7 +10,7 @@ public class Telefono implements ValueObject<Integer> {
 
     public Telefono(int value){
         this.value = Objects.requireNonNull(value);
-    }
+   }
 
     public Integer value(){
         return value;
