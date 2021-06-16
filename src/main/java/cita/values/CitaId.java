@@ -1,7 +1,6 @@
 package cita.values;
 
 import co.com.sofka.domain.generic.Identity;
-import medico.values.EspecialidadId;
 
 public class CitaId extends Identity {
 

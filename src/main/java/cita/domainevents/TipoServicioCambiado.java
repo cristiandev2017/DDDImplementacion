@@ -5,20 +5,19 @@ import cita.values.TipoServicio;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class TipoServicioCambiado extends DomainEvent {
-    private final ServicioId entityId;
-
+    private final ServicioId servicioId;
     private final TipoServicio tipoServicio;
 
-    public TipoServicioCambiado(ServicioId entityId, TipoServicio tipoServicio){
+    public TipoServicioCambiado(ServicioId servicioId, TipoServicio tipoServicio){
         super("sofka.cita.tiposerviciocambiado");
-        this.entityId = entityId;
+        this.servicioId = servicioId;
         this.tipoServicio = tipoServicio;
     }
     public TipoServicio getTipoServicio(){
         return tipoServicio;
     }
 
-    public ServicioId getEntityId() {
-        return entityId;
+    public ServicioId getServicioId() {
+        return servicioId;
     }
 }

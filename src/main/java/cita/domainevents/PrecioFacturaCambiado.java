@@ -5,17 +5,17 @@ import cita.values.Precio;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class PrecioFacturaCambiado extends DomainEvent {
-    private FacturaId entityId;
+    private FacturaId facturaId;
     private Precio precio;
 
-    public PrecioFacturaCambiado(FacturaId entityId, Precio precio){
+    public PrecioFacturaCambiado(FacturaId facturaId, Precio precio){
         super("sofka.cita.preciofacturacambiado");
-        this.entityId = entityId;
+        this.facturaId = facturaId;
         this.precio = precio;
     }
 
-    public FacturaId getEntityId() {
-        return entityId;
+    public FacturaId getFacturaId() {
+        return facturaId;
     }
 
     public Precio getPrecio() {
