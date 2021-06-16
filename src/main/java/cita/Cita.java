@@ -5,7 +5,6 @@ import cita.values.*;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 
-
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,10 +18,11 @@ public class Cita extends AggregateEvent<CitaId>{
     protected Set<Servicio> servicios;
     protected Set<Factura> facturas;
 
-
+    /*
     public Cita(CitaId entityId){
         super(entityId);
     }
+     */
 
     //Agregar o crear cita
     public Cita(CitaId entityId, Descripcion descripcion, Fecha fecha, HoraCita horaCita){
@@ -40,6 +40,13 @@ public class Cita extends AggregateEvent<CitaId>{
     //CambiarDescripcion
     public void cambiarDescripcion(Descripcion descripcion){
         appendChange(new DescripcionCambiada(descripcion)).apply();
+    }
+
+    //Ahora se afectaran los estados se crea un constructor privado
+    private Cita(CitaId entityId){
+        super(entityId);
+        //Se realiza una suscripcion de los eventos
+        subscribe(new CitaChange(this));
     }
 
     //Crear factura
@@ -83,7 +90,6 @@ public class Cita extends AggregateEvent<CitaId>{
                 .filter(servicio -> servicio.identity().equals(entityId))
                 .findFirst();
     }
-
 
     //Getters
     public Fecha getFecha() {
